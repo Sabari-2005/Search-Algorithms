@@ -19,27 +19,73 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-
-
-
+def linearSearch(array,n,k):
+    for i in range(0,n):
+        if (array[i] == k):
+            return i
+    return -1
+    
+    
+array = eval(input())
+k=eval(input())
+n= len(array)
+array.sort()
+result = linearSearch(array,n,k)
+if(result == -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
-
-
-
-
+def linearSearch(array,n,k):
+    for i in range(0,n):
+        if (array[i] == k):
+            return i
+    return -1
+    
+    
+array = eval(input())
+k=eval(input())
+n= len(array)
+array.sort()
+result = linearSearch(array,n,k)
+if(result == -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
-
-
-
-
+def binary(array,key,low,high):
+    if high>=low:
+        mid=low+(high-low)//2
+        if array[mid]==key:
+            return mid
+        elif array[mid]<key:
+            return binary(array,key,mid+1,high)
+        elif array[mid]>key:
+            return binary(array,key,low,mid-1)
+    return -1
+array=eval(input())
+key=int(input())
+array.sort()
+low,high=0,len(array)-1
+print(array)
+result=binary(array,key,low,high)
+if result==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",result)
 ```
 ## Sample Input and Output
+![Screenshot 2024-05-07 135911](https://github.com/Sabari-2005/Search-Algorithms/assets/139338709/7b6704cb-c150-452d-b025-066cd4bd505f)
+![Screenshot 2024-05-07 135926](https://github.com/Sabari-2005/Search-Algorithms/assets/139338709/136bb05f-6a79-48d5-8c2e-851ff2b75523)
+![Screenshot 2024-05-07 135942](https://github.com/Sabari-2005/Search-Algorithms/assets/139338709/c5f0528a-c0bd-4aa9-96d3-fe115f0d5bab)
 
 
 
